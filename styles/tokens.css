@@ -1,0 +1,56 @@
+@layer tokens {
+
+  :root {
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+    --clr-gray-900: #3D3B48;
+    --clr-gray-200: #DEDEDE;
+    --clr-purple-700: #5E54A4;
+    --clr-purple-400: #A6A1CF;
+    --clr-purple-350: #BAB7D4;
+    --clr-green-400: #38CC8B;
+    --clr-green-300: #77E2B3;
+    --clr-red-400: #FF7979;
+
+    --clr-text-primary: var(--clr-gray-900);
+    --clr-text-inverse: var(--clr-white);
+    --clr-text-muted: var(--clr-purple-350);
+    --clr-text-error: var(--clr-red-400);
+
+    --clr-surface-page: var(--clr-red-400);
+    --clr-surface-card: var(--clr-white);
+    --clr-surface-accent: var(--clr-purple-700);
+    --clr-surface-success: var(--clr-green-400);
+    --clr-surface-success-hover: var(--clr-green-300);
+
+    --clr-border-default: var(--clr-gray-200);
+    --clr-border-focus: var(--clr-gray-900);
+    --clr-border-error: var(--clr-red-400);
+
+    --space-0: 0;
+    --space-100: 0.5rem;
+    --space-200: 1rem;
+    --space-300: 1.5rem;
+    --space-400: 2rem;
+    --space-500: 2.5rem;
+    --space-600: 3rem;
+    --space-800: 4rem;
+
+    --ff-base: 'Poppins', system-ui, sans-serif;
+
+    --fs-xs: 0.6875rem;
+    --fs-sm: 0.9375rem;
+    --fs-base: 1rem;
+    --fs-xl: clamp(1.75rem, .4rem + 5.7vw, 3.125rem);
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --radius-md: 0.3125rem;
+    --radius-lg: 0.625rem;
+
+    --transition-fast: .25s ease-out;
+  }
+}
