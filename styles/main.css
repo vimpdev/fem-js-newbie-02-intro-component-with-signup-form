@@ -89,14 +89,17 @@
   }
 
   .signup__input {
+    --padding-block: var(--space-200);
+    --padding-inline: var(--space-300);
+
     inline-size: 100%;
-    padding: var(--space-200) var(--space-300);
+    padding: var(--padding-block) var(--padding-inline);
     font-size: var(--fs-sm);
     border-radius: var(--radius-md);
     border: 0.0625rem solid var(--clr-border-default);
     color: var(--clr-text-primary);
-    line-height: 1.75;
     letter-spacing: 0.0167em;
+    line-height: 1.47;
     outline-color: transparent;
 
     &::placeholder {
@@ -144,7 +147,7 @@
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-inset);
     letter-spacing: 0.134em;
-    line-height: 1.75;
+    line-height: 1.6;
   }
 
   .signup__terms {
@@ -208,6 +211,22 @@
   }
 }
 
-@layer responsive {}
+@layer responsive {
+
+  @media (width >=48rem) {
+
+    .signup__form {
+      --padding-block: var(--space-400);
+      --padding-inline: var(--space-500);
+      --stack-gap: var(--space-300);
+
+      padding: var(--padding-block) var(--padding-inline);
+    }
+
+    .signup__input {
+      --padding-inline: var(--space-400);
+    }
+  }
+}
 
 @layer states {}
