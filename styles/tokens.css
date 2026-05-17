@@ -7,7 +7,7 @@
     --clr-gray-200: #DEDEDE;
     --clr-purple-700: #5E54A4;
     --clr-purple-400: #A6A1CF;
-    --clr-purple-350: #BAB7D4;
+    --clr-purple-350: #796EA6;
     --clr-green-400: #38CC8B;
     --clr-green-300: #77E2B3;
     --clr-red-400: #FF7979;
@@ -28,6 +28,7 @@
     --clr-border-error: var(--clr-red-400);
 
     --space-0: 0;
+    --space-50: 0.25rem;
     --space-100: 0.5rem;
     --space-200: 1rem;
     --space-300: 1.5rem;
@@ -50,6 +51,9 @@
 
     --radius-md: 0.3125rem;
     --radius-lg: 0.625rem;
+
+    --shadow-card: 0 0.5rem 0 color-mix(in srgb, var(--clr-black) 15%, transparent);
+    --shadow-inset: inset 0 -0.25rem 0 color-mix(in srgb, var(--clr-black) 9%, transparent);
 
     --transition-fast: .25s ease-out;
   }

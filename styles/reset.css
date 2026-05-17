@@ -96,6 +96,11 @@
     outline-offset: 3px;
   }
 
+  [hidden] {
+    /* Ensure hidden elements remain fully hidden */
+    display: none !important;
+  }
+
   @media (prefers-reduced-motion: reduce) {
 
     *,
