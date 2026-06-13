@@ -1,0 +1,54 @@
+@layer tokens {
+
+  :root {
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+    --clr-gray-900: #3D3B48;
+    --clr-gray-200: #DEDEDE;
+    --clr-purple-700: #5E54A4;
+    --clr-purple-400: #A6A1CF;
+    --clr-purple-350: #BAB7D4;
+    --clr-green-400: #38CC8B;
+    --clr-green-300: #77E2B3;
+    --clr-red-400: #FF7979;
+
+    --space-0: 0;
+    --space-100: 0.5rem;
+    --space-200: 1rem;
+    --space-300: 1.5rem;
+    --space-400: 2rem;
+    --space-500: 2.5rem;
+    --space-600: 3rem;
+    --space-800: 4rem;
+
+    --clr-txt-primary: var(--clr-gray-900);
+    --clr-txt-secondary: var(--clr-purple-350);
+    --clr-txt-inverse: var(--clr-white);
+    --clr-txt-danger: var(--clr-red-400);
+
+    --clr-bg-primary: var(--clr-red-400);
+    --clr-bg-secondary: var(--clr-white);
+    --clr-bg-accent: var(--clr-purple-700);
+    --clr-bg-success: var(--clr-green-400);
+
+    --ff-base: 'Poppins', system-ui, sans-serif;
+
+    --fs-xs: 0.6875rem;
+    --fs-sm: 0.9375rem;
+    --fs-md: 1rem;
+    --fs-lg: clamp(1.75rem, .46rem + 5.5vw, 3.125rem);
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --radius-100: 0.3125rem;
+    --radius-200: 0.625rem;
+
+    --shadow-elevation-100: 0 0.5rem color-mix(in srgb, var(--clr-black) 14.69%, transparent);
+    --shadow-inset-100: inset 0 -0.25rem color-mix(in srgb, var(--clr-black) 9.09%, transparent);
+
+    --transition-fast: .25s ease-out;
+  }
+}
