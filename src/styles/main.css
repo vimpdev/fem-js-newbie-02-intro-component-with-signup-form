@@ -1,0 +1,197 @@
+@layer reset, fonts, tokens, base, layout, components, utilities, responsive, states;
+
+@import url('./reset.css') layer(reset);
+@import url('./fonts.css') layer(fonts);
+@import url('./tokens.css') layer(tokens);
+
+@layer base {
+  body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    justify-items: center;
+
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    background: url('./../assets/images/bg-intro-mobile.png') center top var(--clr-bg-primary);
+    color: var(--clr-txt-inverse);
+
+    >* {
+      grid-area: 1/1;
+    }
+  }
+}
+
+@layer layout {
+  .main {
+    --stack-gap: var(--space-800);
+    --page-gutter: var(--space-600);
+
+    padding-block: 5.5rem;
+    inline-size: min(100% - var(--page-gutter), 69.5625rem);
+  }
+}
+
+@layer components {
+  .intro {
+    --stack-gap: var(--space-200);
+
+    text-align: center;
+
+    h1 {
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      letter-spacing: -0.0107em;
+      line-height: 1.3;
+    }
+  }
+
+  .banner {
+    padding-inline: var(--space-200);
+    padding-block: 1.11rem;
+    font-size: var(--fs-sm);
+    text-wrap: balance;
+    text-align: center;
+    background-color: var(--clr-bg-accent);
+    border-radius: var(--radius-200);
+    box-shadow: var(--shadow-elevation-100);
+    letter-spacing: 0.0166em;
+    line-height: 1.75;
+
+    span {
+      font-weight: var(--fw-bold);
+    }
+  }
+
+  .signup {
+    --stack-gap: var(--space-300);
+  }
+
+  .signup-form {
+    --stack-gap: var(--space-200);
+
+    padding: var(--space-300);
+    font-size: var(--fs-sm);
+    background-color: var(--clr-bg-secondary);
+    border-radius: var(--radius-200);
+    box-shadow: var(--shadow-elevation-100);
+    line-height: 1.75;
+  }
+
+  .field {
+    --stack-gap: var(--space-100);
+
+    p {
+      margin-inline-start: auto;
+      font-size: var(--fs-xs);
+      font-style: italic;
+      font-weight: var(--fw-medium);
+      color: var(--clr-txt-danger);
+      line-height: 1.55;
+    }
+  }
+
+  .control {
+    display: grid;
+
+    >* {
+      grid-area: 1/1;
+    }
+
+    input {
+      inline-size: 100%;
+      padding-block: .87rem;
+      padding-inline: var(--space-300);
+      border: 1px solid var(--clr-gray-200);
+      border-radius: var(--radius-100);
+      letter-spacing: 0.0166em;
+    }
+
+    img {
+      margin-inline-end: var(--space-200);
+      justify-self: end;
+      align-self: center;
+    }
+  }
+
+  .actions {
+    --stack-gap: var(--space-100);
+
+    button {
+      padding-block: .93rem;
+      inline-size: 100%;
+      font-weight: var(--fw-semibold);
+      text-transform: uppercase;
+      background-color: var(--clr-bg-success);
+      border-radius: var(--radius-100);
+      letter-spacing: 0.134em;
+      box-shadow: var(--shadow-inset-100);
+    }
+
+    p {
+      font-size: var(--fs-xs);
+      text-align: center;
+      color: var(--clr-txt-secondary);
+      line-height: 1.9;
+
+      a {
+        font-weight: var(--fw-bold);
+        color: var(--clr-txt-danger);
+      }
+    }
+  }
+
+  .attribution {
+    padding-block: var(--space-200);
+    align-self: end;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+    text-align: center;
+
+    a {
+      position: relative;
+      margin-inline: .3em;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-end: -2px;
+        inline-size: 100%;
+        block-size: 2px;
+        background-color: currentColor;
+        transform: scale(1);
+        transform-origin: center;
+        transition: transform var(--transition-fast);
+      }
+    }
+  }
+}
+
+@layer utilities {
+  .stack {
+    display: flex;
+    flex-direction: var(--stack-direction, column);
+    gap: var(--stack-gap, 1rem);
+  }
+
+  .visually-hidden {
+    position: absolute;
+
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@layer responsive {}
+
+@layer states {}
