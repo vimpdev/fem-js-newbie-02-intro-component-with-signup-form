@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component with sign-up form | VIMP</title>
+
+  <link rel="icon" href="./favicon.png">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./scripts/main.js" defer></script>
+</head>
+
+<body>
+
+  <main>
+    <section class="intro">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+        understanding how developers think is invaluable.</p>
+    </section>
+
+    <section class="signup">
+      <h2 id="signup-title" class="visually-hidden">Sign up for the free trial</h2>
+
+      <p class="banner"><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+
+      <form id="signup-form" aria-labelledby="signup-title" novalidate>
+        <div class="field">
+          <label for="firstname" class="visually-hidden">First Name</label>
+          <input type="text" name="firstname" id="firstname" placeholder="First Name"
+            aria-describedby="firstname-err-msg" autocomplete="given-name" required>
+          <img src="./assets/icons/icon-error.svg" alt="" class="warning-icon" hidden>
+          <p id="firstname-err-msg" aria-live="polite" hidden>First Name cannot be empty</p>
+        </div>
+        <div class="field">
+          <label for="lastname" class="visually-hidden">Last Name</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Last Name" aria-describedby="lastname-err-msg"
+            autocomplete="family-name" required>
+          <img src="./assets/icons/icon-error.svg" alt="" class="warning-icon" hidden>
+          <p id="lastname-err-msg" aria-live="polite" hidden>Last Name cannot be empty</p>
+        </div>
+        <div class="field">
+          <label for="email" class="visually-hidden">Email Address</label>
+          <input type="email" name="email" id="email" placeholder="Email Address" aria-describedby="email-err-msg"
+            autocomplete="email" pattern="^[^@\s]+@[^@\s]+\.[a-zA-Z]{2,}$" required>
+          <img src="./assets/icons/icon-error.svg" alt="" class="warning-icon" hidden>
+          <p id="email-err-msg" aria-live="polite" hidden>Looks like this is not an email</p>
+        </div>
+        <div class="field">
+          <label for="password" class="visually-hidden">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password"
+            aria-describedby="password-err-msg" autocomplete="new-password" required>
+          <img src="./assets/icons/icon-error.svg" alt="" class="warning-icon" hidden>
+          <p id="password-err-msg" aria-live="polite" hidden>Password cannot be empty</p>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Claim your free trial</button>
+          <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    <small>
+      Challenge by <a href="https://www.frontendmentor.io/challenges" target="_blank" rel="noopener noreferrer">Frontend
+        Mentor</a> – Coded by <a href="https://www.frontendmentor.io/profile/vimpdev" target="_blank"
+        rel="noopener noreferrer">VIMP</a>
+    </small>
+  </footer>
+
+</body>
+
+</html>
