@@ -26,9 +26,10 @@
   .main {
     --stack-gap: var(--space-800);
     --page-gutter: var(--space-600);
+    --max-width: 33.75rem;
 
     padding-block: 5.5rem;
-    inline-size: min(100% - var(--page-gutter), 69.5625rem);
+    inline-size: min(100% - var(--page-gutter), var(--max-width));
   }
 }
 
@@ -43,6 +44,10 @@
       font-weight: var(--fw-bold);
       letter-spacing: -0.0107em;
       line-height: 1.3;
+    }
+
+    p {
+      line-height: 1.65;
     }
   }
 
@@ -76,6 +81,12 @@
     border-radius: var(--radius-200);
     box-shadow: var(--shadow-elevation-100);
     line-height: 1.75;
+
+    @media (width >=48rem) {
+      --stack-gap: var(--space-300);
+
+      padding: var(--space-400) var(--space-500);
+    }
   }
 
   .field {
@@ -101,10 +112,16 @@
     input {
       inline-size: 100%;
       padding-block: .87rem;
-      padding-inline: var(--space-300);
+      padding-inline-start: var(--space-300);
+      padding-inline-end: var(--space-600);
       border: 1px solid var(--clr-gray-200);
       border-radius: var(--radius-100);
+      color: var(--clr-txt-primary);
       letter-spacing: 0.0166em;
+
+      @media (width >=48rem) {
+        padding-inline-start: var(--space-400);
+      }
     }
 
     img {
