@@ -1,4 +1,4 @@
-@layer reset, fonts, tokens, base, layout, components, utilities, responsive, states;
+@layer reset, fonts, tokens, base, layout, components, utilities, states;
 
 @import url('./reset.css') layer(reset);
 @import url('./fonts.css') layer(fonts);
@@ -8,8 +8,7 @@
   body {
     display: grid;
     grid-template-rows: 1fr auto;
-    justify-content: center;
-    justify-items: center;
+    place-items: center;
 
     font-family: var(--ff-base);
     font-weight: var(--fw-regular);
@@ -19,17 +18,31 @@
     >* {
       grid-area: 1/1;
     }
+
+    @media (width >=75rem) {
+      background-image: url('./../assets/images/bg-intro-desktop.png');
+    }
   }
 }
 
 @layer layout {
   .main {
-    --stack-gap: var(--space-800);
     --page-gutter: var(--space-600);
-    --max-width: 33.75rem;
+    --main-max-width: 33.75rem;
 
+    inline-size: min(100% - var(--page-gutter), var(--main-max-width));
     padding-block: 5.5rem;
-    inline-size: min(100% - var(--page-gutter), var(--max-width));
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-800);
+
+    @media (width >=75rem) {
+      --main-max-width: 69.5625rem;
+
+      padding-block: 7.5625rem;
+      flex-direction: row;
+      gap: var(--space-600);
+    }
   }
 }
 
@@ -42,12 +55,23 @@
     h1 {
       font-size: var(--fs-lg);
       font-weight: var(--fw-bold);
+      text-wrap: balance;
       letter-spacing: -0.0107em;
       line-height: 1.3;
+
+      @media (width >=48rem) {
+        line-height: 1.1;
+      }
     }
 
     p {
       line-height: 1.65;
+    }
+
+    @media (width >=75rem) {
+      text-align: left;
+      align-self: center;
+      flex: 1;
     }
   }
 
@@ -70,6 +94,10 @@
 
   .signup {
     --stack-gap: var(--space-300);
+
+    @media (width >=75rem) {
+      flex: 0 0 33.75rem;
+    }
   }
 
   .signup-form {
@@ -188,7 +216,7 @@
 @layer utilities {
   .stack {
     display: flex;
-    flex-direction: var(--stack-direction, column);
+    flex-direction: column;
     gap: var(--stack-gap, 1rem);
   }
 
@@ -209,6 +237,5 @@
   }
 }
 
-@layer responsive {}
 
 @layer states {}
