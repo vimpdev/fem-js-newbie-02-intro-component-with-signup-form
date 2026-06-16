@@ -142,10 +142,19 @@
       padding-block: .87rem;
       padding-inline-start: var(--space-300);
       padding-inline-end: var(--space-600);
-      border: 1px solid var(--clr-gray-200);
+      border: 1px solid var(--clr-border-default);
       border-radius: var(--radius-100);
       color: var(--clr-txt-primary);
       letter-spacing: 0.0166em;
+      outline: none;
+
+      &:focus-visible {
+        border-color: var(--clr-border-focus);
+      }
+
+      &:user-invalid {
+        border: 2px solid var(--clr-border-danger);
+      }
 
       @media (width >=48rem) {
         padding-inline-start: var(--space-400);
@@ -205,9 +214,13 @@
         inline-size: 100%;
         block-size: 2px;
         background-color: currentColor;
-        transform: scale(1);
+        transform: scaleX(1);
         transform-origin: center;
         transition: transform var(--transition-fast);
+      }
+
+      &:is(:hover, :focus-visible)::after {
+        transform: scaleX(0);
       }
     }
   }
