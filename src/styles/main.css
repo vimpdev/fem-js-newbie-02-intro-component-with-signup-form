@@ -224,6 +224,44 @@
       }
     }
   }
+
+
+  .dialog {
+    inline-size: min(100% - 2rem, 25rem);
+    padding: var(--space-300) var(--space-400);
+    text-align: center;
+    background: var(--clr-bg-primary);
+    border-radius: .5em;
+    border: none;
+    color: inherit;
+
+    h2 {
+      margin-block-end: var(--space-100);
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-block-end: var(--space-300);
+      font-size: var(--fs-md);
+    }
+
+
+    button {
+      padding: var(--space-100) var(--space-400);
+      font-size: var(--fs-md);
+      font-weight: var(--fw-semibold);
+      background: var(--clr-bg-secondary);
+      color: var(--clr-txt-primary);
+      border: none;
+      border-radius: 3em;
+      box-shadow: var(--shadow-inset-100);
+    }
+
+    &::backdrop {
+      background-color: var(--clr-bg-accent);
+      opacity: .75;
+    }
+  }
 }
 
 @layer utilities {

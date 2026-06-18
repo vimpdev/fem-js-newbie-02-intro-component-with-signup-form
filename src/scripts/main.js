@@ -1,5 +1,6 @@
 const signupForm = document.getElementById("signup-form");
 const inputs = signupForm.querySelectorAll("input");
+const dialog = document.getElementById("dialog");
 
 function showError(input) {
   const field = input.closest(".field");
@@ -52,7 +53,7 @@ signupForm.addEventListener("submit", (e) => {
   });
 
   if (isFormValid) {
-    console.log("form enviado");
+    dialog.showModal();
     signupForm.reset();
   }
 
