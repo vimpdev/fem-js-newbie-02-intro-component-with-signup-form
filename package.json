@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpx servor src/ index.html 1234 --reload"
+    "dev": "pnpx servor src/ index.html 1234 --reload",
+    "deploy": "gh-pages -d src"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "servor": "4.0.2"
   }
 }
