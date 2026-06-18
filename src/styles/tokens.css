@@ -8,8 +8,10 @@
     --clr-purple-700: #5E54A4;
     --clr-purple-400: #A6A1CF;
     --clr-purple-350: #BAB7D4;
-    --clr-green-400: #38CC8B;
+    --clr-purple-350: #796EA6;
+    --clr-green-400: #23865B;
     --clr-green-300: #77E2B3;
+    --clr-red-500: #d93838;
     --clr-red-400: #FF7979;
 
     --space-0: 0;
@@ -24,16 +26,17 @@
     --clr-txt-primary: var(--clr-gray-900);
     --clr-txt-secondary: var(--clr-purple-350);
     --clr-txt-inverse: var(--clr-white);
-    --clr-txt-danger: var(--clr-red-400);
+    --clr-txt-danger: var(--clr-red-500);
 
     --clr-bg-primary: var(--clr-red-400);
     --clr-bg-secondary: var(--clr-white);
     --clr-bg-accent: var(--clr-purple-700);
     --clr-bg-success: var(--clr-green-400);
+    --clr-bg-focus: var(--clr-green-300);
 
     --clr-border-default: var(--clr-gray-200);
     --clr-border-focus: var(--clr-purple-700);
-    --clr-border-danger: var(--clr-red-400);
+    --clr-border-danger: var(--clr-red-500);
 
     --ff-base: 'Poppins', system-ui, sans-serif;
 

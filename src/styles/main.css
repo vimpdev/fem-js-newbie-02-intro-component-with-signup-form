@@ -1,4 +1,4 @@
-@layer reset, fonts, tokens, base, layout, components, utilities, states;
+@layer reset, fonts, tokens, base, layout, components, utilities;
 
 @import url('./reset.css') layer(reset);
 @import url('./fonts.css') layer(fonts);
@@ -22,6 +22,10 @@
     @media (width >=75rem) {
       background-image: url('./../assets/images/bg-intro-desktop.png');
     }
+  }
+
+  :focus-visible {
+    outline-color: currentColor;
   }
 }
 
@@ -180,6 +184,12 @@
       border-radius: var(--radius-100);
       letter-spacing: 0.134em;
       box-shadow: var(--shadow-inset-100);
+      transition: background-color var(--transition-fast);
+      outline-color: var(--clr-bg-success);
+
+      &:is(:hover, :focus-visible) {
+        background-color: var(--clr-bg-focus);
+      }
     }
 
     p {
@@ -189,6 +199,7 @@
       line-height: 1.9;
 
       a {
+        margin-inline: .3em;
         font-weight: var(--fw-bold);
         color: var(--clr-txt-danger);
       }
@@ -287,6 +298,3 @@
     border: 0;
   }
 }
-
-
-@layer states {}
