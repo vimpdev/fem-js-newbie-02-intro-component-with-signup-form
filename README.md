@@ -16,7 +16,7 @@ This is a solution to the [Intro component with sign-up form challenge on Fronte
 ## Links
 
 - 🌎 [Live site](https://vimpdev.github.io/fem-js-newbie-02-intro-component-with-signup-form/)
-<!-- - 📌 [Frontend Mentor solution]() -->
+- 📌 [Frontend Mentor solution](https://www.frontendmentor.io/solutions/intro-component-form-accessible-form-validation-with-vanilla-js-jUpzqNr1rK)
 
 ---
 
@@ -205,6 +205,6 @@ All code was implemented, tested, and refined manually as part of the learning p
 
 ## 👩‍💻 Author
 
-- Frontend Mentor – [@vimp](https://www.frontendmentor.io/profile/vimp)
+- Frontend Mentor – [@vimpdev](https://www.frontendmentor.io/profile/vimpdev)
 
 ---
